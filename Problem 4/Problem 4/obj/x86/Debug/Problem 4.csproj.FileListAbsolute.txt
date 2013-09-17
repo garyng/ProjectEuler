@@ -1,0 +1,5 @@
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 4\Problem 4\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 4\Problem 4\bin\Debug\Problem 4.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 4\Problem 4\bin\Debug\Problem 4.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 4\Problem 4\obj\x86\Debug\Problem 4.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 4\Problem 4\obj\x86\Debug\Problem 4.pdb
