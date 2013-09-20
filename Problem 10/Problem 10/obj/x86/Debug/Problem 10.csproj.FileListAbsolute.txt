@@ -1,0 +1,7 @@
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 10\bin\Debug\Problem 10.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 10\bin\Debug\Problem 10.pdb
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 10\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 10\obj\x86\Debug\Problem 10.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 10\obj\x86\Debug\Problem 10.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 10\Problem 10\obj\x86\Debug\Problem 10.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 10\Problem 10\obj\x86\Debug\Problem 10.pdb
