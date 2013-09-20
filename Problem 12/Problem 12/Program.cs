@@ -2,40 +2,59 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Numerics;
+using System.Diagnostics;
 
-namespace MathHelper
+namespace Problem_12
 {
-    public class Prime
+    class Program
     {
-        public static List<int> Read(string FileName)
+        static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(FileName);
-            List<int> iPrimes = new List<int>();
-            List<string> strPrimes = Regex.Split(sr.ReadToEnd(), Environment.NewLine).ToList();
-            //remove the last blank line
-            if (strPrimes.Last() == "")
+            int largest = 0;
+            int sum = 1;
+            int count = 1;
+            List<int> primes = GenPrime(100000);
+            Stopwatch sw = Stopwatch.StartNew();
+            int facCount = 0;
+            while (largest < 500)
             {
-                strPrimes.RemoveAt(strPrimes.Count - 1);
+                facCount = GetFactorsCount(sum, primes);
+                if (facCount > largest)
+                {
+                    largest = facCount;
+                }
+                count++;
+                sum += count;
             }
-            strPrimes.ForEach(item => iPrimes.Add(Convert.ToInt32(item)));
-            return iPrimes;
+            sum -= count;
+            count--;
+            sw.Stop();
+            Console.WriteLine("Number : " + sum + " with " + largest + " factors, triangular number # " + count);
+            Console.WriteLine(sw.Elapsed);
+            Console.ReadKey();
         }
 
-        public static void Write(List<int> Prime, string FileName)
+        /// <summary>
+        /// (a+1)(b+1)...
+        /// </summary>
+        /// <param name="Number">A number</param>
+        /// <param name="Primes">A list of prime</param>
+        /// <returns>Factors count</returns>
+        public static int GetFactorsCount(int Number, List<int> Primes)
         {
-            StreamWriter sw = new StreamWriter(FileName);
-            Prime.ForEach(delegate(int item)
+            Dictionary<int, int> primeFactors = Factorize(Number, Primes);
+            var facEnum = primeFactors.GetEnumerator();
+            KeyValuePair<int, int> facPair = new KeyValuePair<int, int>();
+            int facCount = 1;
+            while (facEnum.MoveNext())
             {
-                sw.WriteLine(item);
-            });
-            sw.Close();
+                facPair = facEnum.Current;
+                facCount *= facPair.Value + 1;
+            }
+            return facCount;
         }
 
-
-        public static List<int> Generate(int max)
+        public static List<int> GenPrime(int max)
         {
             List<bool> bSieve = new List<bool>();
             List<int> iNumbers = new List<int>();
@@ -66,19 +85,13 @@ namespace MathHelper
             return Prime;
         }
 
-
-
-    }
-
-    public class Factor
-    {
         /// <summary>
         /// Factorize a number with a given prime list
         /// </summary>
         /// <param name="num">Number to factorize</param>
         /// <param name="primes">List of primes</param>
         /// <returns>A dictionary with the prime factor and its index</returns>
-        public static Dictionary<int,int> Factorize(int Number, List<int> Primes)
+        public static Dictionary<int, int> Factorize(int Number, List<int> Primes)
         {
             Dictionary<int, int> factors = new Dictionary<int, int>();
             List<int> primes = new List<int>(Primes);
@@ -118,56 +131,5 @@ namespace MathHelper
 
             return factors;
         }
-
-        public static int GCD(int Num1, int Num2)
-        {
-            if (Num1 == 0)
-            {
-                return Num2;
-            }
-            int n1 = Num1;
-            int n2 = Num2;
-            while (n2 > 0)
-            {
-                if (n1 > n2)
-                {
-                    n1 -= n2;
-                }
-                else
-                {
-                    n2 -= n1;
-                }
-            }
-            return n1;
-        }
-
-        //LCM(a,b)= a*(b/GCD(a,b))
-        public static int LCM(int Num1, int Num2)
-        {
-            //will throw error?
-            return Num1 * (Num2 / GCD(Num1, Num2));
-        }
-
-        /// <summary>
-        /// (a+1)(b+1)...
-        /// </summary>
-        /// <param name="Number">A number</param>
-        /// <param name="Primes">A list of prime</param>
-        /// <returns>Factors count</returns>
-        public static int GetFactorsCount(int Number,List<int> Primes)
-        {
-            Dictionary<int, int> primeFactors = Factorize(Number, Primes);
-            var facEnum = primeFactors.GetEnumerator();
-            KeyValuePair<int, int> facPair = new KeyValuePair<int, int>();
-            int facCount = 1;
-            while (facEnum.MoveNext())
-            {
-                facPair = facEnum.Current;
-                facCount *= facPair.Value + 1;
-            }
-            return facCount;
-        }
     }
-
-
 }
