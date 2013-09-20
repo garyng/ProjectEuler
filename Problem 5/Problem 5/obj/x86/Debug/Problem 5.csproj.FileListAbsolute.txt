@@ -1,0 +1,12 @@
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 5\bin\Debug\Problem 5.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 5\bin\Debug\Problem 5.pdb
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 5\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 5\obj\x86\Debug\Problem 5.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 5\obj\x86\Debug\Problem 5.pdb
+D:\Documents and Settings\GaryNg\Desktop\pe.net\Problem 5\Problem 5\obj\x86\Debug\Problem 5.exe
+D:\Documents and Settings\GaryNg\Desktop\pe.net\Problem 5\Problem 5\obj\x86\Debug\Problem 5.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 5\Problem 5\obj\x86\Debug\Problem 5.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 5\Problem 5\obj\x86\Debug\Problem 5.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 5\Problem 5\bin\Debug\Problem 5.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 5\Problem 5\bin\Debug\Problem 5.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 5\Problem 5\obj\x86\Debug\ResolveAssemblyReference.cache

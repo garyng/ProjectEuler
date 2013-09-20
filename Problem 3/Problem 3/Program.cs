@@ -38,7 +38,10 @@ namespace Problem_3
             List<int> iPrimes = new List<int>();
             List<string> strPrimes = Regex.Split(sr.ReadToEnd(), Environment.NewLine).ToList();
             //remove the last blank line
-            strPrimes.RemoveAt(strPrimes.Count - 1);
+            if (strPrimes.Last() == "")
+            {
+                strPrimes.RemoveAt(strPrimes.Count - 1);
+            }
             strPrimes.ForEach(item => iPrimes.Add(Convert.ToInt32(item)));
             return iPrimes;
         }
