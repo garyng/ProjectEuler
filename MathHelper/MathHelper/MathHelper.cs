@@ -181,6 +181,7 @@ namespace MathHelper
             return factorial;
         }
     }
+
     public class Combination
     {
         public static BigInteger Calc(int n, int r)
