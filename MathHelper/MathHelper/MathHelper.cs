@@ -78,7 +78,7 @@ namespace MathHelper
         /// <param name="num">Number to factorize</param>
         /// <param name="primes">List of primes</param>
         /// <returns>A dictionary with the prime factor and its index</returns>
-        public static Dictionary<int,int> Factorize(int Number, List<int> Primes)
+        public static Dictionary<int, int> Factorize(int Number, List<int> Primes)
         {
             Dictionary<int, int> factors = new Dictionary<int, int>();
             List<int> primes = new List<int>(Primes);
@@ -154,7 +154,7 @@ namespace MathHelper
         /// <param name="Number">A number</param>
         /// <param name="Primes">A list of prime</param>
         /// <returns>Factors count</returns>
-        public static int GetFactorsCount(int Number,List<int> Primes)
+        public static int GetFactorsCount(int Number, List<int> Primes)
         {
             Dictionary<int, int> primeFactors = Factorize(Number, Primes);
             var facEnum = primeFactors.GetEnumerator();
@@ -166,6 +166,62 @@ namespace MathHelper
                 facCount *= facPair.Value + 1;
             }
             return facCount;
+        }
+    }
+
+    public class Factorial
+    {
+        public static BigInteger Calc(int n)
+        {
+            BigInteger factorial = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+            }
+            return factorial;
+        }
+    }
+    public class Combination
+    {
+        public static BigInteger Calc(int n, int r)
+        {
+            if (n >= r)
+            {
+                BigInteger result = 1;
+                for (int i = n; i >= n - r + 1; i--)
+                {
+                    result *= i;
+                }
+                for (int i = 1; i <= r; i++)
+                {
+                    result /= i;
+                }
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
+
+    public class Permutation
+    {
+        public static BigInteger Calc(int n, int r)
+        {
+            if (n >= r)
+            {
+                BigInteger result = 1;
+                for (int i = n; i >= n - r + 1; i--)
+                {
+                    result *= i;
+                }
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 

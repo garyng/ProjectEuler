@@ -1,0 +1,7 @@
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bin\Debug\MathHelperDemo.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bin\Debug\MathHelperDemo.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bin\Debug\MathHelper.dll
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bin\Debug\MathHelper.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.pdb
