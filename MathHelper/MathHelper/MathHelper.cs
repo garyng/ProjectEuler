@@ -35,7 +35,7 @@ namespace MathHelper
         }
 
 
-        public static List<int> Generate(int max)
+        public static List<int> ESeive(int max)
         {
             List<bool> bSieve = new List<bool>();
             List<int> iNumbers = new List<int>();
@@ -84,10 +84,19 @@ namespace MathHelper
             List<int> primes = new List<int>(Primes);
             int number = Number;
             int item;
-            // can optimize to : Loop until sqrt(Number)
+            int limit = (int)Math.Ceiling(Math.Sqrt(number));
+            if (primes.BinarySearch(number) > -1)
+            {
+                factors.Add(number, 1);
+                return factors;
+            }
             for (int i = 0; i < primes.Count; i++)
             {
                 item = primes[i];
+                if (item > Number)
+                {
+                    break;
+                }
                 if ((number % item) == 0)
                 {
                     bool isDivisible = true;
@@ -164,6 +173,24 @@ namespace MathHelper
             {
                 facPair = facEnum.Current;
                 facCount *= facPair.Value + 1;
+            }
+            return facCount;
+        }
+
+        /// <summary>
+        /// Get sum of all factors including itself
+        /// </summary>
+        /// <param name="Factors"></param>
+        /// <returns></returns>
+        public static BigInteger GetSumOfFactors(Dictionary<int, int> Factors)
+        {
+            var facEnum = Factors.GetEnumerator();
+            KeyValuePair<int, int> facPair = new KeyValuePair<int, int>();
+            BigInteger facCount = 1;
+            while (facEnum.MoveNext())
+            {
+                facPair = facEnum.Current;
+                facCount *= (BigInteger.Pow(facPair.Key, facPair.Value + 1) - 1) / (facPair.Key - 1);
             }
             return facCount;
         }
