@@ -66,7 +66,42 @@ namespace MathHelper
             return Prime;
         }
 
+        public static List<int> ESeive(int Min, int Max)
+        {
+            List<bool> bSieve = new List<bool>();
+            List<int> iNumbers = new List<int>();
 
+            int min = Min <= 1 ? 2 : Min;
+            int max = Max;
+
+            for (int i = 2; i <= Max; i++)
+            {
+                bSieve.Add(true);  //true = prime
+                iNumbers.Add(i);
+            }
+
+            for (int i = 0; i < iNumbers.Count; i++)
+            {
+                for (int j = iNumbers[i]; j <= iNumbers.Last(); j += iNumbers[i])
+                {
+                    if (j == iNumbers[i])
+                    {
+                        continue;
+                    }
+                    bSieve[j - 2] = false;
+                }
+            }
+            List<int> prime = new List<int>();
+            for (int i = 0; i < bSieve.Count; i++)
+            {
+                if (bSieve[i] == true && iNumbers[i] >= min)
+                {
+                    prime.Add(iNumbers[i]);
+                }
+            }
+
+            return prime;
+        }
 
     }
 
