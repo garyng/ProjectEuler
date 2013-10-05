@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using System.Collections;
 
 namespace Problem_21
 {
@@ -20,7 +21,6 @@ namespace Problem_21
             for (int i = 1; i < limit / 2; i++)
             {
                 int sumOfFac = GetSumOfFactors(Factorize(i, primes)) - i;
-                int sumOfFacFac = 0;
                 if (sumOfFac > i)
                 {
                     sumAllFacs.Add(i, sumOfFac);
@@ -55,6 +55,7 @@ namespace Problem_21
             List<bool> bSieve = new List<bool>();
             List<int> iNumbers = new List<int>();
 
+
             for (int i = 1; i <= max; i++)  //exclude 1
             {
                 bSieve.Add(true);  //true = prime
@@ -87,7 +88,6 @@ namespace Problem_21
             List<int> primes = new List<int>(Primes);
             int number = Number;
             int item;
-            int limit = (int)Math.Ceiling(Math.Sqrt(number));
             if (primes.BinarySearch(number) > -1)
             {
                 factors.Add(number, 1);

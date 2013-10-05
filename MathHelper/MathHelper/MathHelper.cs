@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Numerics;
+using System.Collections;
 
 namespace MathHelper
 {
@@ -35,74 +36,29 @@ namespace MathHelper
         }
 
 
-        public static List<int> ESeive(int max)
+        public static List<int> ESieve(int max)
         {
-            List<bool> bSieve = new List<bool>();
-            List<int> iNumbers = new List<int>();
-
-            for (int i = 1; i <= max; i++)  //exclude 1
+            BitArray baSeive = new BitArray(max - 1);
+            List<int> primes = new List<int>();
+            for (int i = 2; i < baSeive.Count + 2; i++)
             {
-                bSieve.Add(true);  //true = prime
-                iNumbers.Add(i);
-            }
-            bSieve[0] = false;  //[0]=1
-            for (int i = 1; i < iNumbers.Count; i++)
-            {
-                for (int y = iNumbers[i]; y <= iNumbers.Last(); y += iNumbers[i])
+                if (baSeive.Get(i - 2) == false)
                 {
-                    if (y == iNumbers[i]) continue;
-                    bSieve[y - 1] = false;
-                }
-            }
-            List<int> Prime = new List<int>();
-            for (int i = 0; i < bSieve.Count; i++)
-            {
-                if (bSieve[i] == true)
-                {
-                    Prime.Add(iNumbers[i]);
-                }
-            }
-
-            return Prime;
-        }
-
-        public static List<int> ESeive(int Min, int Max)
-        {
-            List<bool> bSieve = new List<bool>();
-            List<int> iNumbers = new List<int>();
-
-            int min = Min <= 1 ? 2 : Min;
-            int max = Max;
-
-            for (int i = 2; i <= Max; i++)
-            {
-                bSieve.Add(true);  //true = prime
-                iNumbers.Add(i);
-            }
-
-            for (int i = 0; i < iNumbers.Count; i++)
-            {
-                for (int j = iNumbers[i]; j <= iNumbers.Last(); j += iNumbers[i])
-                {
-                    if (j == iNumbers[i])
+                    for (int j = i + i; j <= max; j += i)
                     {
-                        continue;
+                        baSeive.Set(j - 2, true);
                     }
-                    bSieve[j - 2] = false;
                 }
             }
-            List<int> prime = new List<int>();
-            for (int i = 0; i < bSieve.Count; i++)
+            for (int i = 0; i < baSeive.Count; i++)
             {
-                if (bSieve[i] == true && iNumbers[i] >= min)
+                if (baSeive.Get(i) == false)
                 {
-                    prime.Add(iNumbers[i]);
+                    primes.Add(i + 2);
                 }
             }
-
-            return prime;
+            return primes;
         }
-
     }
 
     public class Factor
