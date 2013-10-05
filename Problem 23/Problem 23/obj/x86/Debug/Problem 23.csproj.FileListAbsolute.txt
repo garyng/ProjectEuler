@@ -1,0 +1,10 @@
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 23\bin\Debug\Problem 23.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 23\bin\Debug\Problem 23.pdb
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 23\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 23\obj\x86\Debug\Problem 23.exe
+C:\Documents and Settings\GaryNg\Local Settings\Application Data\Temporary Projects\Problem 23\obj\x86\Debug\Problem 23.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 23\Problem 23\obj\x86\Debug\Problem 23.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 23\Problem 23\obj\x86\Debug\Problem 23.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 23\Problem 23\bin\Debug\Problem 23.exe
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 23\Problem 23\bin\Debug\Problem 23.pdb
+D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\Problem 23\Problem 23\obj\x86\Debug\ResolveAssemblyReference.cache
