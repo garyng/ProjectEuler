@@ -5,3 +5,5 @@ D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bi
 D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\bin\Debug\MathHelper.pdb
 D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.exe
 D:\Documents and Settings\GaryNg\Desktop\Git\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.pdb
+D:\Users\GaryNg-Win7\Desktop\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.exe
+D:\Users\GaryNg-Win7\Desktop\pe.net\MathHelper\MathHelperDemo\obj\x86\Debug\MathHelperDemo.pdb
